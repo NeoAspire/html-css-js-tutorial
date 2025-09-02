@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Tutorial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="javascript.html">JavaScript</a>
+  </nav>
+
+  <div class="tutorial">
+    <h1>💻 JavaScript – Complete Guide</h1>
+    <p>This page explains JavaScript from the basics to advanced concepts.  
+    It’s designed for beginners and also covers modern ES6+ features.</p>
+
+    <div class="nav-buttons">
+      <a href="css.html">← Previous (CSS)</a>
+      <a href="index.html">Next (Home) →</a>
+    </div>
+
+    <h2>1. What is JavaScript?</h2>
+    <p>JavaScript is a high-level, dynamic, interpreted programming language.</p>
+    <ul>
+      <li>Originally built for browsers to make web pages interactive.</li>
+      <li>Now runs everywhere: frontend, backend, mobile apps, desktop apps, IoT.</li>
+      <li>Follows the ECMAScript (ES) standard.</li>
+      <li>Prototype-based OOP, weakly typed, dynamic, single-threaded with an event loop.</li>
+    </ul>
+
+    <h2>2. How to Use JavaScript</h2>
+    <pre>
+&lt;button onclick="alert('Hello!')"&gt;Click&lt;/button&gt;
+
+&lt;script&gt;
+  console.log("Hello, world!");
+&lt;/script&gt;
+
+&lt;script src="script.js"&gt;&lt;/script&gt;
+    </pre>
+
+    <h2>3. JavaScript Basics</h2>
+    <h3>Variables</h3>
+    <pre>
+var name = "John";   // function-scoped
+let age = 25;        // block-scoped
+const PI = 3.14;     // constant
+    </pre>
+
+    <h3>Data Types</h3>
+    <ul>
+      <li>Primitive: string, number, boolean, null, undefined, symbol, bigint</li>
+      <li>Non-primitive: object (arrays, functions, dates, etc.)</li>
+    </ul>
+    <pre>
+let str = "hello";
+let num = 42;
+let isTrue = false;
+let x;        // undefined
+let y = null; // null
+let big = 123n;
+let sym = Symbol();
+    </pre>
+
+    <h3>Type Checking</h3>
+    <pre>
+typeof "hello"; // "string"
+typeof null;    // "object" (quirk)
+Array.isArray([1,2]); // true
+    </pre>
+
+    <h2>4. Operators</h2>
+    <ul>
+      <li>Arithmetic: + - * / % **</li>
+      <li>Assignment: = += -= *= /= %=</li>
+      <li>Comparison: == != === !== > < >= <=</li>
+      <li>Logical: && || !</li>
+      <li>Ternary: condition ? expr1 : expr2</li>
+      <li>Nullish Coalescing: ??</li>
+      <li>Optional Chaining: ?.</li>
+    </ul>
+
+    <h2>5. Control Structures</h2>
+    <pre>
+if (x > 10) { ... }
+else if (x == 10) { ... }
+else { ... }
+
+switch (day) {
+  case 1: console.log("Mon"); break;
+  default: console.log("Other");
+}
+
+for (let i=0; i<5; i++) { ... }
+while (i < 5) { ... }
+do { ... } while (i<5);
+
+for (let item of array) { ... }   // iterable values
+for (let key in object) { ... }   // object keys
+    </pre>
+
+    <h2>6. Functions</h2>
+    <pre>
+// Function Declaration
+function add(a, b) {
+  return a + b;
+}
+
+// Function Expression
+const multiply = function(a, b) { return a*b; };
+
+// Arrow Function
+const square = x => x * x;
+
+// Default / Rest / Spread
+function greet(name = "Guest") { ... }
+function sum(...nums) { return nums.reduce((a,b)=>a+b); }
+const arr = [1,2,3];
+console.log(...arr);
+    </pre>
+
+    <h2>7. Objects</h2>
+    <pre>
+const person = {
+  name: "Alice",
+  age: 30,
+  greet() { console.log("Hi " + this.name); }
+};
+person.greet();
+
+Object.keys(person);
+Object.values(person);
+Object.entries(person);
+    </pre>
+
+    <h2>8. Arrays</h2>
+    <pre>
+let nums = [1, 2, 3];
+nums.push(4);
+nums.pop();
+nums.shift();
+nums.unshift(0);
+
+nums.map(x => x*2);
+nums.filter(x => x%2===0);
+nums.reduce((a,b)=>a+b,0);
+nums.find(x=>x>2);
+nums.includes(2);
+nums.sort((a,b)=>a-b);
+    </pre>
+
+    <h2>9. Strings</h2>
+    <pre>
+let str = "Hello World";
+str.toUpperCase();
+str.indexOf("World");
+str.slice(0,5);
+str.replace("World","JS");
+str.split(" ");
+`Hello ${name}`;  // template literal
+    </pre>
+
+    <h2>10. Dates & Math</h2>
+    <pre>
+let now = new Date();
+now.getFullYear();
+now.toLocaleDateString();
+
+Math.PI;
+Math.round(4.7);
+Math.random();
+    </pre>
+
+    <h2>11. DOM Manipulation</h2>
+    <pre>
+document.getElementById("id");
+document.querySelector(".class");
+
+const el = document.createElement("div");
+document.body.appendChild(el);
+
+el.innerHTML = "Hello";
+el.style.color = "red";
+el.classList.add("active");
+
+el.addEventListener("click", () => alert("Clicked!"));
+    </pre>
+
+    <h2>12. BOM (Browser Object Model)</h2>
+    <pre>
+window.alert("Hi");
+window.location.href = "https://example.com";
+window.history.back();
+
+setTimeout(() => {}, 2000);
+setInterval(() => {}, 1000);
+clearInterval(id);
+    </pre>
+
+    <h2>13. JSON</h2>
+    <pre>
+const obj = {name:"John", age:30};
+const str = JSON.stringify(obj);
+const parsed = JSON.parse(str);
+    </pre>
+
+    <h2>14. Error Handling</h2>
+    <pre>
+try {
+  throw new Error("Something went wrong");
+} catch (err) {
+  console.log(err.message);
+} finally {
+  console.log("Always runs");
+}
+    </pre>
+
+    <h2>15. Asynchronous JavaScript</h2>
+    <pre>
+// Callback
+setTimeout(() => console.log("Done"), 1000);
+
+// Promise
+let promise = new Promise((resolve,reject)=>{
+  setTimeout(()=>resolve("Success"),1000);
+});
+promise.then(res=>console.log(res));
+
+// Async/Await
+async function fetchData() {
+  try {
+    let res = await fetch("https://api.example.com");
+    let data = await res.json();
+    console.log(data);
+  } catch(err) {
+    console.error(err);
+  }
+}
+    </pre>
+
+    <h2>16. Classes & OOP</h2>
+    <pre>
+class Person {
+  constructor(name) { this.name = name; }
+  greet() { console.log("Hi " + this.name); }
+}
+class Student extends Person {
+  constructor(name, grade) {
+    super(name);
+    this.grade = grade;
+  }
+}
+    </pre>
+
+    <h2>17. Modules</h2>
+    <pre>
+// math.js
+export const add = (a,b)=>a+b;
+export default function multiply(a,b){ return a*b; }
+
+// main.js
+import multiply, {add} from './math.js';
+    </pre>
+
+    <h2>18. ES6+ Features</h2>
+    <ul>
+      <li>let, const</li>
+      <li>Template literals</li>
+      <li>Arrow functions</li>
+      <li>Destructuring: <code>const [a,b] = [1,2];</code></li>
+      <li>Spread/Rest</li>
+      <li>Default parameters</li>
+      <li>Modules, Classes, Async/Await</li>
+      <li>Optional chaining <code>?.</code>, Nullish coalescing <code>??</code></li>
+      <li>BigInt</li>
+    </ul>
+
+    <h2>19. Event Loop</h2>
+    <p>JS is single-threaded but asynchronous via the event loop:</p>
+    <ul>
+      <li>Call Stack</li>
+      <li>Callback Queue</li>
+      <li>Event Loop → moves async tasks back to stack</li>
+    </ul>
+
+    <h2>20. Storage</h2>
+    <pre>
+localStorage.setItem("key","value");
+localStorage.getItem("key");
+
+sessionStorage.setItem("temp","123");
+    </pre>
+
+    <h2>21. Advanced Topics</h2>
+    <pre>
+// Closure
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  }
+}
+const counter = outer();
+counter(); // 1
+
+// Hoisting
+sayHi();
+function sayHi(){ console.log("Hello"); }
+
+// This keyword (context-dependent)
+    </pre>
+
+    <h2>22. Tools & Ecosystem</h2>
+    <ul>
+      <li>Node.js: server-side runtime</li>
+      <li>NPM: package manager</li>
+      <li>Frameworks: React, Angular, Vue, Svelte</li>
+      <li>Testing: Jest, Mocha</li>
+      <li>Build Tools: Webpack, Vite, Babel</li>
+    </ul>
+
+    <h2>23. Best Practices</h2>
+    <ul>
+      <li>Use <code>===</code> instead of <code>==</code>.</li>
+      <li>Prefer <code>const</code> and <code>let</code> over <code>var</code>.</li>
+      <li>Write modular, reusable functions.</li>
+      <li>Handle errors gracefully.</li>
+      <li>Follow ES6+ standards.</li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a href="css.html">← Previous (CSS)</a>
+      <a href="index.html">Next (Home) →</a>
+    </div>
+  </div>
+
+  <footer>
+    <em>NeoAspire Copyright © 2023 - 25</em>
+  </footer>
+</body>
+</html>
+
+
+

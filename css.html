@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Tutorial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="javascript.html">JavaScript</a>
+  </nav>
+
+  <div class="tutorial">
+    <h1>📘 CSS (Cascading Style Sheets) – Complete Guide</h1>
+    <p>This page covers everything from CSS basics to advanced features.  
+    Each section explains the concept with examples and best practices.</p>
+
+    <div class="nav-buttons">
+      <a href="html.html">← Previous (HTML)</a>
+      <a href="javascript.html">Next (JavaScript) →</a>
+    </div>
+
+    <h2>1. What is CSS?</h2>
+    <p>CSS is a stylesheet language that controls the presentation of HTML documents.  
+    It defines how elements look: colors, fonts, spacing, layout, animations, responsiveness, and more.</p>
+    <ul>
+      <li>It separates <strong>content (HTML)</strong> from <strong>design (CSS)</strong>.</li>
+    </ul>
+
+    <h2>2. CSS Syntax</h2>
+    <pre>
+selector {
+  property: value;
+}
+    </pre>
+    <ul>
+      <li><strong>Selector</strong>: Targets an element (<code>p</code>, <code>.class</code>, <code>#id</code>).</li>
+      <li><strong>Property</strong>: The aspect you want to style (color, font-size, margin).</li>
+      <li><strong>Value</strong>: The setting (<code>red</code>, <code>16px</code>, <code>10px</code>).</li>
+    </ul>
+    <pre>
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+    </pre>
+
+    <h2>3. Ways to Apply CSS</h2>
+    <p>There are three main ways to add CSS:</p>
+    <ul>
+      <li><strong>Inline CSS</strong> – inside an element.</li>
+      <li><strong>Internal CSS</strong> – inside a <code>&lt;style&gt;</code> in <code>&lt;head&gt;</code>.</li>
+      <li><strong>External CSS</strong> – in a separate <code>.css</code> file (recommended).</li>
+    </ul>
+    <pre>
+&lt;p style="color: red;"&gt;Hello&lt;/p&gt;
+
+&lt;style&gt;
+  p { color: red; }
+&lt;/style&gt;
+
+&lt;link rel="stylesheet" href="style.css"&gt;
+    </pre>
+    <div class="note">👉 External CSS is preferred for clean, reusable code.</div>
+
+    <h2>4. Selectors</h2>
+    <p>Selectors determine which elements CSS rules apply to.</p>
+    <ul>
+      <li><strong>Basic Selectors:</strong> <code>p</code>, <code>#id</code>, <code>.class</code>, <code>*</code></li>
+      <li><strong>Combinators:</strong> <code>div p</code>, <code>div > p</code>, <code>div + p</code>, <code>div ~ p</code></li>
+      <li><strong>Attribute Selectors:</strong> <code>[attr]</code>, <code>[attr="value"]</code>, <code>[attr^="value"]</code></li>
+      <li><strong>Pseudo-classes:</strong> <code>:hover</code>, <code>:active</code>, <code>:first-child</code>, <code>:nth-child(2n)</code></li>
+      <li><strong>Pseudo-elements:</strong> <code>::before</code>, <code>::after</code>, <code>::first-line</code></li>
+    </ul>
+
+    <h2>5. CSS Units</h2>
+    <ul>
+      <li><strong>Absolute:</strong> px, pt, cm, mm, in</li>
+      <li><strong>Relative:</strong> %, em, rem, vw, vh, vmin, vmax</li>
+    </ul>
+
+    <h2>6. Colors</h2>
+    <ul>
+      <li>Named: red, blue</li>
+      <li>HEX: #ff0000</li>
+      <li>RGB: rgb(255,0,0)</li>
+      <li>RGBA: rgba(255,0,0,0.5)</li>
+      <li>HSL: hsl(0,100%,50%)</li>
+    </ul>
+
+    <h2>7. Fonts & Text</h2>
+    <pre>
+font-family: Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+font-style: italic;
+text-align: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+line-height: 1.5;
+text-decoration: underline;
+    </pre>
+
+    <h2>8. The Box Model</h2>
+    <p>Every element is a rectangular box with layers:</p>
+    <ul>
+      <li>Content → text or image</li>
+      <li>Padding → space inside border</li>
+      <li>Border → thickness around padding</li>
+      <li>Margin → space outside border</li>
+    </ul>
+    <pre>
+div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 30px;
+  box-sizing: border-box;
+}
+    </pre>
+
+    <h2>9. Display & Positioning</h2>
+    <p><strong>Display:</strong> block, inline, inline-block, none, flex, grid</p>
+    <p><strong>Position:</strong> static, relative, absolute, fixed, sticky</p>
+
+    <h2>10. Backgrounds</h2>
+    <pre>
+background-color: lightblue;
+background-image: url("img.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+    </pre>
+
+    <h2>11. Borders & Shadows</h2>
+    <pre>
+border: 2px solid black;
+border-radius: 10px;
+box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+text-shadow: 2px 2px 5px gray;
+    </pre>
+
+    <h2>12. Lists</h2>
+    <pre>
+list-style-type: disc | circle | square | none;
+list-style-image: url("bullet.png");
+    </pre>
+
+    <h2>13. Tables</h2>
+    <pre>
+border-collapse: collapse;
+border-spacing: 10px;
+caption-side: bottom;
+    </pre>
+
+    <h2>14. Flexbox</h2>
+    <pre>
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+    </pre>
+
+    <h2>15. Grid</h2>
+    <pre>
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+    </pre>
+
+    <h2>16. Transitions</h2>
+    <pre>
+button {
+  background: blue;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: red;
+}
+    </pre>
+
+    <h2>17. Animations</h2>
+    <pre>
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+div {
+  animation: bounce 2s infinite;
+}
+    </pre>
+
+    <h2>18. Transformations</h2>
+    <pre>
+transform: translate(50px, 20px);
+transform: rotate(45deg);
+transform: scale(1.5);
+transform: skew(20deg);
+    </pre>
+
+    <h2>19. Responsive Design</h2>
+    <pre>
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+}
+    </pre>
+
+    <h2>20. CSS Variables</h2>
+    <pre>
+:root {
+  --main-color: #3498db;
+  --padding: 10px;
+}
+div {
+  color: var(--main-color);
+  padding: var(--padding);
+}
+    </pre>
+
+    <h2>21. CSS Functions</h2>
+    <pre>
+width: calc(100% - 50px);
+font-size: clamp(14px, 2vw, 18px);
+color: rgba(255,0,0,0.7);
+    </pre>
+
+    <h2>22. Advanced Features</h2>
+    <ul>
+      <li>Filters: blur, brightness, contrast, grayscale</li>
+      <li>Blend Modes: <code>mix-blend-mode</code></li>
+      <li>Clip Path: <code>clip-path: circle(50%);</code></li>
+      <li>Masking and Shape Outside</li>
+      <li>CSS Subgrid (Grid Level 2)</li>
+    </ul>
+
+    <h2>23. CSS Best Practices</h2>
+    <ul>
+      <li>Keep CSS modular (use external files).</li>
+      <li>Use meaningful class names (e.g., BEM: <code>.block__element--modifier</code>).</li>
+      <li>Avoid too many <code>!important</code> rules.</li>
+      <li>Use variables for consistency.</li>
+      <li>Minify CSS for production.</li>
+      <li>Consider frameworks (Bootstrap, Tailwind, Bulma).</li>
+      <li>Test across browsers.</li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a href="html.html">← Previous (HTML)</a>
+      <a href="javascript.html">Next (JavaScript) →</a>
+    </div>
+  </div>
+
+  <footer>
+    <em>NeoAspire Copyright © 2023 - 25</em>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

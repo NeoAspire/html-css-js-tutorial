@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Tutorial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="html.html">HTML</a>
+    <a href="css.html">CSS</a>
+    <a href="javascript.html">JavaScript</a>
+  </nav>
+
+  <div class="tutorial">
+    <h1>HTML Tutorial for Beginners</h1>
+    <p>This page will teach you HTML step by step, from the basics to advanced elements.  
+    At the end, you’ll also find a categorized reference of all HTML elements.</p>
+
+    <div class="nav-buttons">
+      <a href="index.html">← Home</a>
+      <a href="css.html">Next →</a>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <h2>Introduction to HTML</h2>
+    <p>HTML stands for <strong>HyperText Markup Language</strong>.  
+    It is the standard language used to structure web pages.</p>
+    <ul>
+      <li>HTML uses <strong>elements</strong> (tags) to mark up content.</li>
+      <li>Browsers read HTML and display it for users.</li>
+      <li>HTML is not a programming language — it’s a <em>markup language</em>.</li>
+    </ul>
+
+    <!-- BASIC STRUCTURE -->
+    <h2>Basic Structure of a Web Page</h2>
+    <div class="code-box">
+      <pre id="code1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+      <button onclick="runCode('code1','output1')">▶ Run</button>
+      <iframe id="output1"></iframe>
+    </div>
+
+    <!-- HEADINGS & PARAGRAPHS -->
+    <h2>Headings and Paragraphs</h2>
+    <div class="code-box">
+      <pre id="code2">&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Subtitle&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
+      <button onclick="runCode('code2','output2')">▶ Run</button>
+      <iframe id="output2"></iframe>
+    </div>
+
+    <!-- LINKS & IMAGES -->
+    <h2>Links and Images</h2>
+    <div class="code-box">
+      <pre id="code3">&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;
+&lt;img src="https://via.placeholder.com/150" alt="Placeholder"&gt;</pre>
+      <button onclick="runCode('code3','output3')">▶ Run</button>
+      <iframe id="output3"></iframe>
+    </div>
+
+    <!-- LISTS -->
+    <h2>Lists</h2>
+    <div class="code-box">
+      <pre id="code4">&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</pre>
+      <button onclick="runCode('code4','output4')">▶ Run</button>
+      <iframe id="output4"></iframe>
+    </div>
+
+    <!-- FORMS -->
+    <h2>Forms</h2>
+    <div class="code-box">
+      <pre id="code5">&lt;form&gt;
+  Name: &lt;input type="text"&gt;&lt;br&gt;
+  Email: &lt;input type="email"&gt;&lt;br&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+      <button onclick="runCode('code5','output5')">▶ Run</button>
+      <iframe id="output5"></iframe>
+    </div>
+
+    <!-- SEMANTIC HTML -->
+    <h2>Semantic HTML</h2>
+    <p>Semantic elements describe their meaning clearly:</p>
+    <ul>
+      <li><code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code></li>
+      <li><code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code></li>
+      <li><code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code></li>
+    </ul>
+
+    <!-- ===================== -->
+    <!-- FULL CATEGORIES REFERENCE -->
+    <!-- ===================== -->
+
+    <h1>🏷️ Categories of HTML Elements & Tags</h1>
+
+    <h2>1. Document Metadata</h2>
+    <ul>
+      <li><code>&lt;title&gt;</code> – Sets the title in browser tab.</li>
+      <li><code>&lt;meta&gt;</code> – Metadata (charset, description, keywords).</li>
+      <li><code>&lt;link&gt;</code> – Connects external resources (CSS, favicon).</li>
+      <li><code>&lt;style&gt;</code> – Internal CSS.</li>
+      <li><code>&lt;script&gt;</code> – Embeds JavaScript.</li>
+      <li><code>&lt;base&gt;</code> – Sets base URL for links.</li>
+    </ul>
+
+    <h2>2. Text Content & Formatting</h2>
+    <ul>
+      <li><code>&lt;h1&gt; to &lt;h6&gt;</code> – Headings.</li>
+      <li><code>&lt;p&gt;</code> – Paragraph.</li>
+      <li><code>&lt;br&gt;</code> – Line break.</li>
+      <li><code>&lt;hr&gt;</code> – Divider line.</li>
+      <li><code>&lt;strong&gt;</code>, <code>&lt;b&gt;</code> – Bold.</li>
+      <li><code>&lt;em&gt;</code>, <code>&lt;i&gt;</code> – Italic.</li>
+      <li><code>&lt;u&gt;</code> – Underlined text.</li>
+      <li><code>&lt;mark&gt;</code> – Highlighted text.</li>
+      <li><code>&lt;small&gt;</code> – Small text.</li>
+      <li><code>&lt;sub&gt;</code>, <code>&lt;sup&gt;</code> – Subscript/Superscript.</li>
+      <li><code>&lt;blockquote&gt;</code>, <code>&lt;q&gt;</code> – Quotations.</li>
+      <li><code>&lt;abbr&gt;</code> – Abbreviation.</li>
+      <li><code>&lt;cite&gt;</code> – Title of work.</li>
+      <li><code>&lt;code&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;kbd&gt;</code>, <code>&lt;samp&gt;</code>, <code>&lt;var&gt;</code> – Code and text formatting.</li>
+    </ul>
+
+    <h2>3. Grouping Content</h2>
+    <ul>
+      <li><code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></li>
+      <li><code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code></li>
+      <li><code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code></li>
+      <li><code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code></li>
+      <li><code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code></li>
+      <li><code>&lt;details&gt;</code> + <code>&lt;summary&gt;</code></li>
+    </ul>
+
+    <h2>4. Lists</h2>
+    <ul>
+      <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></li>
+      <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code></li>
+    </ul>
+
+    <h2>5. Links & Navigation</h2>
+    <ul>
+      <li><code>&lt;a&gt;</code> – Hyperlinks with <code>href</code>, <code>target</code>.</li>
+    </ul>
+
+    <h2>6. Images & Multimedia</h2>
+    <ul>
+      <li><code>&lt;img&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;source&gt;</code></li>
+      <li><code>&lt;track&gt;</code>, <code>&lt;picture&gt;</code>, <code>&lt;map&gt;</code>, <code>&lt;area&gt;</code></li>
+    </ul>
+
+    <h2>7. Tables</h2>
+    <ul>
+      <li><code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></li>
+      <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code></li>
+      <li><code>&lt;caption&gt;</code>, <code>&lt;colgroup&gt;</code>, <code>&lt;col&gt;</code></li>
+    </ul>
+
+    <h2>8. Forms & Input</h2>
+    <ul>
+      <li><code>&lt;form&gt;</code>, <code>&lt;input&gt;</code> (text, email, number, date, file, color, etc.)</li>
+      <li><code>&lt;label&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code></li>
+      <li><code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code></li>
+      <li><code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code></li>
+      <li><code>&lt;datalist&gt;</code>, <code>&lt;output&gt;</code></li>
+      <li><code>&lt;progress&gt;</code>, <code>&lt;meter&gt;</code></li>
+    </ul>
+
+    <h2>9. Scripting & Embedded Content</h2>
+    <ul>
+      <li><code>&lt;script&gt;</code>, <code>&lt;noscript&gt;</code></li>
+      <li><code>&lt;canvas&gt;</code>, <code>&lt;svg&gt;</code></li>
+      <li><code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;param&gt;</code></li>
+      <li><code>&lt;iframe&gt;</code></li>
+    </ul>
+
+    <h2>10. Semantic & Interactive Elements</h2>
+    <ul>
+      <li><code>&lt;time&gt;</code>, <code>&lt;dialog&gt;</code>, <code>&lt;menu&gt;</code>, <code>&lt;data&gt;</code></li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <p>HTML provides over 100 elements, but the most commonly used are:</p>
+    <ul>
+      <li><strong>Structure:</strong> <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></li>
+      <li><strong>Text:</strong> <code>&lt;h1&gt;-&lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code></li>
+      <li><strong>Media:</strong> <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code></li>
+      <li><strong>Forms:</strong> <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;select&gt;</code></li>
+      <li><strong>Tables:</strong> <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code></li>
+      <li><strong>Semantic:</strong> <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code></li>
+    </ul>
+
+    <div class="nav-buttons">
+      <a href="index.html">← Home</a>
+      <a href="css.html">Next →</a>
+    </div>
+  </div>
+
+  <footer>
+    <em>NeoAspire Copyright © 2023 - 25</em>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
